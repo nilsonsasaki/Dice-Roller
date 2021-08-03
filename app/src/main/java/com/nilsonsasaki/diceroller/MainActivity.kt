@@ -10,11 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Add functionality to button
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener { rollDice() }
 
     }
-
+    // Create a Dice object and use it to show random numbers in textView
     private fun rollDice() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
